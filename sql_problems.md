@@ -51,4 +51,29 @@ and
 order by t1.visit_date;
 ```
 
+`Wed, 15 June 2022	`
+### Combine Two Tables
+https://leetcode.com/problems/combine-two-tables/
+![image](https://user-images.githubusercontent.com/70185865/173798404-41540d4c-7a78-4193-8227-518018a1c5a2.png)
+```SQL
+
+# Write your MySQL query statement below
+select p.firstName , p.lastName, a.city, a.state
+from Person p
+LEFT JOIN Address a ON a.personId=p.personId
+
+```
+
+### Employees Earning More Than Their Managers
+https://leetcode.com/problems/employees-earning-more-than-their-managers/
+![image](https://user-images.githubusercontent.com/70185865/173799709-a45ae038-6389-4d55-880d-e2cd84feb0ac.png)
+![image](https://user-images.githubusercontent.com/70185865/173799770-16dc35b5-4dbc-4ddd-9b14-98865da3e421.png)
+```SQL
+# Write your MySQL query statement below
+select e1.name as Employee
+from Employee e1
+join employee e2 on e2.id=e1.managerId
+where e1.salary > e2.salary
+```
+
 
