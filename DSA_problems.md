@@ -90,3 +90,40 @@ OUTPUT:
   resultArr = [0, 1]
 ```
 
+## 2 -  Palindrome Number
+https://leetcode.com/problems/palindrome-number/
+
+![image](https://user-images.githubusercontent.com/70185865/173795821-6a534311-0fb6-4b7f-9845-497c3a9bd5e4.png)
+
+
+```JAVA
+
+
+
+package problems;
+
+import java.util.Arrays;
+
+public class LeetcodeProblems {
+
+	public static boolean isPalindrome(int x) {
+		
+		String originalNum = String.valueOf(x);
+		
+		StringBuilder revNum = new StringBuilder(originalNum).reverse();
+		
+		return originalNum.equals( revNum.toString());
+
+	}
+
+	public static void main(String[] args) {
+
+
+		System.out.println("  result = " + isPalindrome(10));
+
+	}
+
+}
+```
+
+
